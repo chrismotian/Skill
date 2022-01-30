@@ -11,10 +11,10 @@ public class Node : MonoBehaviour
 
     private void OnValidate()
     {
-        canBeUnlocked = getCanBeUnlocked();
+        canBeUnlocked = GetCanBeUnlocked();
     }
 
-    bool getCanBeUnlocked()
+    bool GetCanBeUnlocked()
     {
         if(locked == false)
         {
@@ -30,9 +30,9 @@ public class Node : MonoBehaviour
         }
     }
 
-    public void tryUnlock()
+    public void TryUnlock()
     {
-        if (getCanBeUnlocked())
+        if (GetCanBeUnlocked())
         {
             locked = false;
             Debug.Log("I am the " + name + " node and I am unlocked now");
