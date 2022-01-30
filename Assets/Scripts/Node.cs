@@ -29,4 +29,17 @@ public class Node : MonoBehaviour
             return true;
         }
     }
+
+    public void tryUnlock()
+    {
+        if (getCanBeUnlocked())
+        {
+            locked = false;
+            Debug.Log("I am the " + name + " node and I am unlocked now");
+        }
+        else
+        {
+            Debug.Log("I am the " + name + " node and my requirements have to be unlocked first");
+        }
+    }
 }
